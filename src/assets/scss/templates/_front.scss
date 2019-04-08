@@ -1,0 +1,463 @@
+// Page header
+.front-hero {
+  .marketing {
+    @include xy-grid-container(55rem);
+    @include xy-grid;
+  }
+
+  @include breakpoint(small) {
+    background: url('../images/hero-bg-foundation-6-small.jpg') bottom center;
+    background-size: cover;
+    background-position: bottom;
+    padding: rem-calc(65%) 0;
+    margin: 0 0 rem-calc(32);
+    height: auto;
+    position: relative;
+    text-align: left;
+  }
+
+  @include breakpoint(medium) {
+    background: url('../images/hero-bg-foundation-6-small.jpg') bottom center;
+    background-size: cover;
+    background-position: center;
+    height: rem-calc(685);
+    margin: 0 0 rem-calc(72);
+  }
+
+  .watch {
+    @include breakpoint(small) {
+      @include xy-cell(7);
+    }
+
+    @include breakpoint(medium) {
+      @include xy-cell(12);
+    }
+
+    a {
+      color: #B4C9D1;
+      cursor: pointer;
+      font-weight: 400;
+      margin-right: rem-calc(20);
+    }
+
+    a:hover {
+      color: #fff;
+    }
+
+    #stargazers {
+      :before {
+        content: "\f09b";
+        font-family: FontAwesome;
+        font-style: normal;
+        font-weight: normal;
+        text-decoration: inherit;
+        color: #B4C9D1;
+        margin-right: rem-calc(8);
+      }
+    }
+
+    #twitter {
+      :before {
+        content: "\f099";
+        font-family: FontAwesome;
+        font-style: normal;
+        font-weight: normal;
+        text-decoration: inherit;
+        color: #B4C9D1;
+        margin-right: rem-calc(8);
+      }
+    }
+
+  }
+
+  .tagline {
+    @include breakpoint(small) {
+      @include xy-cell(8);
+    }
+
+    @include breakpoint(medium) {
+      @include xy-cell(10);
+      padding-top: 6rem;
+    }
+  }
+
+  h1 {
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: 'Roboto Condensed', sans-serif;
+
+    @include breakpoint(small) {
+      font-size: 2.2rem;
+    }
+
+    @include breakpoint(medium) {
+      font-size: 2.875rem;
+    }
+  }
+
+  h4 {
+    color: #fefefe;
+    font-weight: 300;
+    font-size: 1.3125rem;
+  }
+
+  .download {
+    margin-top: rem-calc(20);
+  }
+}
+
+// Intro
+.intro {
+  @include xy-grid-container;
+  @include xy-grid;
+
+  .fp-intro {
+    @include breakpoint(small) {
+      @include xy-cell(12);
+    }
+
+    @include breakpoint(medium) {
+      @include xy-cell(10);
+      @include xy-cell-offset(1);
+
+      h2 {
+        font-weight: 300;
+        margin-bottom: 1.5rem;
+      }
+
+      h4 {
+        font-size: 1.125rem;
+        line-height: 1.6;
+        color: #777;
+        margin-bottom: 2rem;
+      }
+    }
+  }
+}
+
+// header
+.main-header {
+  @include xy-cell(12);
+  text-align: center;
+  font-family: 'Roboto Condensed', sans-serif;
+
+  h2 {
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  p {
+    color: #777;
+    text-transform: uppercase;
+    margin: 0;
+  }
+}
+
+// Button
+.button {
+  border-radius: 5%;
+  width: rem-calc(150)
+}
+
+// Section divider
+.section-divider {
+  @include xy-grid-container;
+  @include xy-grid;
+  height: 50px;
+
+  hr {
+    @include xy-cell(12);
+    @extend .dotted;
+    box-sizing: border-box;
+  }
+}
+
+// Products
+.products {
+  @include xy-grid-container;
+  @include xy-grid;
+
+  .home,
+  .auto,
+  .travel {
+
+    @include breakpoint(small) {
+      @include xy-cell(12);
+    }
+
+    @include breakpoint(medium) {
+      @include xy-cell(4);
+    }
+
+    h3 {
+      color: red;
+      font-weight: 300;
+      font-size: 1.75rem;
+    }
+
+    p {
+      font-size: 0.9375rem;
+    }
+
+    .card-content {
+      padding: 1.25rem;
+    }
+  }
+
+}
+
+// About
+.about {
+  @include xy-grid-container;
+  @include xy-grid;
+
+  header {
+    @include xy-cell(12);
+
+    h2 {
+      font-weight: 300;
+      text-transform: uppercase;
+      margin-bottom: rem-calc(30);
+    }
+  }
+
+  .about--image {
+    width: 100%;
+    @include xy-cell(12);
+  }
+
+  .about--content {
+    color: #9d9d9d;
+
+    p {
+      font-size: 0.9375rem;
+      padding-top: rem-calc(30);
+
+    }
+
+  }
+}
+
+// whyChooseUs
+
+
+.whyChooseUs-content {
+  padding: rem-calc(40);
+}
+
+.content-heading {
+
+  font-family: 'Roboto Condensed', sans-serif;
+
+  h2 {
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+
+}
+
+
+// Call to action
+.call-to-action {
+  @include xy-grid-container;
+  @include xy-grid;
+}
+
+// Benefits
+.benefits {
+  @include xy-grid-container;
+  @include xy-grid;
+  text-align: center;
+
+
+  header {
+    @include xy-cell(12);
+
+    h2 {
+      font-weight: 300;
+      text-transform: capitalize;
+    }
+
+    h4 {
+      font-size: 1.125rem;
+      line-height: 1.6;
+      color: #777;
+    }
+  }
+
+
+
+  .support,
+  .trusted,
+  .experience,
+  .joinUs {
+    @include breakpoint(small) {
+      @include xy-cell(12);
+    }
+
+    @include breakpoint(medium) {
+      @include xy-cell(3);
+    }
+
+    img {
+      padding: 1.25rem;
+      margin: 1rem auto 0 auto;
+    }
+
+    h3 {
+      color: black;
+      font-weight: 300;
+      font-size: 1.75rem;
+    }
+
+    p {
+      font-size: 0.9375rem;
+    }
+  }
+
+}
+
+.support,
+.trusted,
+.experience,
+.joinUs:nth-child(3n+0) {
+  border-right: 1px solid #eee;
+}
+
+// Insure Now
+.insureNow {
+  @include xy-grid-container;
+  @include xy-grid;
+  text-align: left;
+
+  header {
+    @include xy-cell(12);
+
+    h2 {
+      font-weight: 300;
+      text-transform: capitalize;
+    }
+
+    h4 {
+      font-size: 1.125rem;
+      line-height: 1.6;
+      color: #777;
+    }
+  }
+
+
+  .insureNow-image,
+  .insureNow-content {
+    @include breakpoint(small) {
+      @include xy-cell(12);
+    }
+
+    @include breakpoint(medium) {
+      @include xy-cell(6);
+    }
+
+    p {
+      font-size: 0.9375rem;
+    }
+  }
+}
+
+// Founders
+.founders {
+  @include xy-grid-container;
+  @include xy-grid;
+  text-align: center;
+
+  header {
+    @include xy-cell(12);
+
+    h2 {
+      font-weight: 300;
+      text-transform: capitalize;
+    }
+
+    h4 {
+      font-size: 1.125rem;
+      line-height: 1.6;
+      color: #777;
+    }
+  }
+
+
+  .ceo,
+  .president {
+    @include breakpoint(small) {
+      @include xy-cell(12);
+    }
+
+    @include breakpoint(medium) {
+      @include xy-cell(6);
+    }
+
+    img {
+      padding: 1.25rem;
+      margin: 1rem auto 0 auto;
+      border-radius: 50%;
+    }
+
+    h3 {
+      color: black;
+      font-weight: 300;
+      font-size: 1.75rem;
+    }
+
+    p {
+      font-size: 0.9375rem;
+      color: #9d9d9d;
+    }
+  }
+}
+
+// Testimonials
+.testimonials {
+  @include xy-grid-container;
+  @include xy-grid;
+  text-align: center;
+
+  header {
+    @include xy-cell(12);
+
+    h2 {
+      font-weight: 300;
+      text-transform: capitalize;
+    }
+
+    h4 {
+      font-size: 1.125rem;
+      line-height: 1.6;
+      color: #777;
+    }
+  }
+
+
+
+  .testimony {
+    @include breakpoint(small) {
+      @include xy-cell(12);
+    }
+
+    img {
+      padding: 1.25rem;
+      margin: 1rem auto 0 auto;
+      border-radius: 50%;
+    }
+
+    h3 {
+      color: black;
+      font-weight: 300;
+      font-size: 1.75rem;
+    }
+
+    blockquote {
+      font-size: 0.9375rem;
+      color: 9d9d9d;
+    }
+  }
+}

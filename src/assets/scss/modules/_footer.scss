@@ -1,0 +1,52 @@
+.footer--main {
+  @include xy-grid-container;
+  @include xy-grid;
+  margin-top: rem-calc(60);
+  margin-bottom: rem-calc(20);
+  color: #9d9d9d;
+
+
+}
+
+.footer--about {
+  text-align: left;
+
+  @include breakpoint(small) {
+    @include xy-cell(12);
+  }
+
+  @include breakpoint(medium) {
+    @include xy-cell(6);
+  }
+}
+
+.quickMenu,
+.insurance,
+.socialMedia {
+  @include breakpoint(small) {
+    @include xy-cell(12);
+  }
+
+  @include breakpoint(medium) {
+    @include xy-cell(auto);
+  }
+}
+
+.footer-grid {
+  @include xy-grid;
+  padding: rem-calc(30) 0;
+
+  section {
+    @include xy-cell();
+
+    @include breakpoint(large) {
+      @include xy-cell(auto);
+    }
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+}
